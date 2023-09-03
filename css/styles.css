@@ -158,6 +158,21 @@ body {
   color: var(--iris);
 }
 
+.page {
+  position: relative;
+}
+
+.page:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--ocean);
+}
+
 .button {
   font-family: inherit;
   font-weight: 500;
@@ -393,7 +408,7 @@ body {
 
 .team-social-link:hover,
 .team-social-link:focus {
-  background-color: var(--green);
+  background-color: var(--ocean);
 }
 
 .substrate {
@@ -424,6 +439,10 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--lightslate);
+}
+
+.customers-icon {
+  fill: currentColor;
 }
 
 .customers-link:hover,
@@ -464,7 +483,7 @@ body {
   line-height: 1.5;
 }
 
-.footer-social {
+.footer-social-text {
   color: var(--white);
 }
 
@@ -474,6 +493,38 @@ body {
 
 .social-container {
   margin-left: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cloud);
+  background-color: var(--iris);
+}
+
+.footer-social-icon {
+  fill: currentColor;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--green);
 }
 
 /* Filter Section */
@@ -501,4 +552,12 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.project:hover,
+.project:focus {
+  display: block;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
